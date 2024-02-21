@@ -45,7 +45,7 @@
         "test:debug": "mocha --inspect=9226 \"test/**/*.spec.js\"",
         "watch": "npm-run-all --parallel watch:dashboard watch:node-red",
         "watch:dashboard": "npm run dev",
-        "watch:node-red": "cd ~/.node-red && npx nodemon --watch $(realpath ./node_modules/@flowfuse/node-red-dashboard/nodes) --ext '*' --exec node-red"
+        "watch:node-red": "cd /data && npx nodemon --watch $(realpath ./node_modules/@flowfuse/node-red-dashboard/nodes) --ext '*' --exec node-red --userDir /data"
     },
     "dependencies": {
         "acorn": "^8.11.2",
@@ -63,7 +63,6 @@
         "@vitejs/plugin-vue": "^4.5.0",
         "chart.js": "^4.4.0",
         "cypress": "^13.6.2",
-
         "dompurify": "^3.0.5",
         "eslint": "^8.53.0",
         "eslint-config-standard": "^17.1.0",
